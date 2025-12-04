@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://stuart159.github.io/fabrica-talentos/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/fabrica-talentos/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fabrica-talentos</title>
-    <script type="module" crossorigin src="https://stuart159.github.io/fabrica-talentos/assets/index-CVrCxwWN.js"></script>
-    <link rel="stylesheet" crossorigin href="https://stuart159.github.io/fabrica-talentos/assets/index-CLMCNzWu.css">
+    <script type="module" crossorigin src="/fabrica-talentos/assets/index-CVrCxwWN.js"></script>
+    <link rel="stylesheet" crossorigin href="/fabrica-talentos/assets/index-CLMCNzWu.css">
   </head>
   <body>
     <div id="root"></div>
@@ -14,13 +14,9 @@
     <!-- Script para manejar rutas en GitHub Pages SPA -->
     <script>
       (function() {
-        // Guarda la ruta actual en sessionStorage para redirección
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
-        
-        // Si hay una redirección pendiente y no es la ruta actual
         if (redirect && redirect !== location.pathname) {
-          // Usa replaceState para cambiar la URL sin recargar
           history.replaceState(null, null, redirect);
         }
       })();
