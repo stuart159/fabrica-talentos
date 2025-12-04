@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting - Fábrica de Talentos</title>
+  <title>Redirecting...</title>
   <script>
-    sessionStorage.redirect = window.location.pathname;
+    // Redirección para SPA
+    const path = window.location.pathname;
+    const hashPath = path.replace('/fabrica-talentos', '');
+    if (hashPath && hashPath !== '/') {
+      window.location.replace('/fabrica-talentos/#' + hashPath);
+    } else {
+      window.location.replace('/fabrica-talentos/');
+    }
   </script>
-  <meta http-equiv="refresh" content="0;URL='https://stuart159.github.io/fabrica-talentos/'" />
 </head>
 <body>
   <p>Redirecting to application...</p>
