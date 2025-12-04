@@ -10,5 +10,20 @@
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Script para manejar rutas en GitHub Pages SPA -->
+    <script>
+      (function() {
+        // Guarda la ruta actual en sessionStorage para redirección
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        
+        // Si hay una redirección pendiente y no es la ruta actual
+        if (redirect && redirect !== location.pathname) {
+          // Usa replaceState para cambiar la URL sin recargar
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </body>
 </html>
